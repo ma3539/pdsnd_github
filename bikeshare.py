@@ -11,6 +11,23 @@ def sleep(msg):
     time.sleep(1)
 
 
+def get_city():
+    city0 = ''
+    choice1 = input("please choose the city 1 for chicago, 2 for"
+                    "new york city, 3 for washington \n")
+    if choice1 == '1':
+        city0 = 'chicago'
+    elif choice1 == '2':
+        city0 = 'new york city'
+    elif choice1 == '3':
+        city0 = 'washington'
+    else :
+        get_city()
+    
+    print(city0)
+    return city0
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -26,17 +43,9 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington).
     # HINT: Use a while loop to handle invalid inputs
-    choice1 = ''
-    while choice1 not in ['1', '2', '3']:
-        choice1 = input("please choose the city 1 for chicago, 2 for"
-                        "new york city, 3 for washington \n")
-        if choice1 == '1':
-            city = 'chicago'
-        if choice1 == '2':
-            city = 'new york city'
-        if choice1 == '3':
-            city = 'washington'
-
+    
+    
+    city = get_city()
     # get user input for month (all, january, february, ... , june)
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     month = ''
