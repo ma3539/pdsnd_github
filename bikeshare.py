@@ -23,8 +23,7 @@ def get_city():
         f_name = 'washington'
     else :
         get_city()
-    
-    print(f_name)
+ 
     return f_name
 
 
