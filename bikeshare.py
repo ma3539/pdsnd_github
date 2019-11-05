@@ -12,20 +12,20 @@ def sleep(msg):
 
 
 def get_city():
-    city0 = ''
+    f_name = ''
     choice1 = input("please choose the city 1 for chicago, 2 for"
                     "new york city, 3 for washington \n")
     if choice1 == '1':
-        city0 = 'chicago'
+        f_name = 'chicago'
     elif choice1 == '2':
-        city0 = 'new york city'
+        f_name = 'new york city'
     elif choice1 == '3':
-        city0 = 'washington'
+        f_name = 'washington'
     else :
         get_city()
     
-    print(city0)
-    return city0
+    print(f_name)
+    return f_name
 
 
 def get_filters():
